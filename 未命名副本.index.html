@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李皇諭 - 國立屏東科技大學工業管理系</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #f8fafc 100%);
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full nav-blur shadow-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">李</div>
+                    <div>
+                        <span class="text-xl font-bold text-slate-800 tracking-tight">李皇諭</span>
+                        <span class="hidden sm:inline text-xs block text-slate-500 font-medium">國立屏東科技大學 工業管理系</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors">首頁</a>
+                    <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-blue-500 transition-colors">關於我</a>
+                    <a href="#research" class="text-sm font-semibold text-slate-600 hover:text-blue-500 transition-colors">研究領域</a>
+                    <a href="#projects" class="text-sm font-semibold text-slate-600 hover:text-blue-500 transition-colors">產學成果</a>
+                    <a href="#contact" class="text-sm font-semibold text-slate-600 hover:text-blue-500 transition-colors">聯絡資訊</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="p-2 text-slate-600">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-4 py-3 text-base font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-md flex items-center"><i data-lucide="user" class="mr-3 w-5 h-5"></i>首頁</a>
+                <a href="#about" class="block px-4 py-3 text-base font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-md flex items-center"><i data-lucide="book-open" class="mr-3 w-5 h-5"></i>關於我</a>
+                <a href="#research" class="block px-4 py-3 text-base font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-md flex items-center"><i data-lucide="flask-conical" class="mr-3 w-5 h-5"></i>研究領域</a>
+                <a href="#projects" class="block px-4 py-3 text-base font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-md flex items-center"><i data-lucide="briefcase" class="mr-3 w-5 h-5"></i>產學成果</a>
+                <a href="#contact" class="block px-4 py-3 text-base font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 rounded-md flex items-center"><i data-lucide="mail" class="mr-3 w-5 h-5"></i>聯絡資訊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="pt-32 pb-20 px-4 gradient-bg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-3/5 text-center md:text-left">
+                <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4">Industrial Management</h2>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+                    產學鏈結 · <span class="text-blue-600">智慧驅動</span> <br />
+                    共創產業數位轉型新未來
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 max-w-xl leading-relaxed">
+                    專注於工業管理領域的研究與實務應用，致力於協助企業透過數位工具優化生產效率，提升全球競爭力。
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all transform hover:-translate-y-1 inline-block text-center">
+                        查看產學成果
+                    </a>
+                    <a href="#contact" class="bg-white text-slate-700 border border-slate-200 px-8 py-3 rounded-full font-bold hover:bg-slate-50 transition-all inline-block text-center">
+                        聯絡我
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/3 mt-12 md:mt-0 relative">
+                <div class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full border-8 border-white shadow-2xl overflow-hidden bg-blue-100 flex items-center justify-center">
+                    <i data-lucide="user" class="text-blue-300 w-32 h-32"></i>
+                </div>
+                <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg border border-slate-100 hidden lg:block">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-green-100 rounded-full text-green-600">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500 font-bold uppercase">現職</div>
+                            <div class="text-sm font-bold">屏科大工管系</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-block p-3 bg-blue-50 text-blue-600 rounded-2xl mb-6">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-6 text-slate-800 underline decoration-blue-500/30 underline-offset-8 italic">關於 李皇諭</h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed text-lg">
+                        <p>
+                            目前任教於國立屏東科技大學工業管理系。長期深耕於智慧製造與生產系統優化，強調「學術理論」與「現場實務」的緊密結合。
+                        </p>
+                        <p>
+                            在產學合作方面，曾帶領團隊深入屏東及周邊縣市工業區，解決企業在排程優化、品質診斷及自動化導入過程中所面臨的挑戰。
+                        </p>
+                    </div>
+                    <div class="mt-10 grid grid-cols-2 gap-6">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center md:text-left">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">10+</div>
+                            <div class="text-sm text-slate-500">產學合作計畫</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center md:text-left">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">20+</div>
+                            <div class="text-sm text-slate-500">專業學術論文</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-900 text-white p-8 rounded-3xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 transform group-hover:scale-110 transition-transform">
+                        <i data-lucide="book-open" class="w-32 h-32"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-6 relative z-10 flex items-center">
+                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                        學歷與專業背景
+                    </h3>
+                    <ul class="space-y-6 relative z-10">
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-3 text-blue-400"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+                            <div>
+                                <div class="font-semibold text-lg">工業工程 博士</div>
+                                <div class="text-slate-400 text-sm">專攻智慧生產與作業研究</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-3 text-blue-400"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+                            <div>
+                                <div class="font-semibold text-lg">智慧製造資深顧問</div>
+                                <div class="text-slate-400 text-sm">輔導超過十家在地中小企業</div>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="mt-1 mr-3 text-blue-400"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+                            <div>
+                                <div class="font-semibold text-lg">精實生產專家</div>
+                                <div class="text-slate-400 text-sm">優化傳統製程、減少生產浪費</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4 text-slate-800">研究與技術領域</h2>
+            <p class="text-slate-500 max-w-2xl mx-auto">以工業工程為核心，結合人工智慧與大數據分析，協助產業升級。</p>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-lift group text-center md:text-left">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i data-lucide="flask-conical"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">智慧製造與數位轉型</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">運用數位孿生技術與數據採集，建立可視化的生產監控系統。</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-lift group text-center md:text-left">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i data-lucide="briefcase"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">生產計畫與管制</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">發展先進排程演算法，解決多目標動態環境下的排程問題。</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-lift group text-center md:text-left">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <i data-lucide="file-text"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-3">大數據品質管理</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">利用機器學習進行預防性維護與品質預測，降低產品缺陷率。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-slate-800">產學合作成果</h2>
+                    <p class="text-slate-500">轉化學術知識為實際產業價值</p>
+                </div>
+            </div>
+
+            <div class="grid gap-8">
+                <!-- Project 1 -->
+                <div class="flex flex-col md:flex-row bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 group">
+                    <div class="md:w-1/3 bg-blue-600 flex items-center justify-center p-12">
+                        <i data-lucide="briefcase" class="text-white w-20 h-20 opacity-40"></i>
+                    </div>
+                    <div class="md:w-2/3 p-8 md:p-12">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">2023 - 2024</span>
+                            <i data-lucide="external-link" class="text-slate-400 w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">中小企業數位轉型診斷與路徑規劃</h3>
+                        <p class="text-blue-600 font-medium mb-4">合作對象：經濟部工業局 / 屏東在地廠商</p>
+                        <p class="text-slate-600 leading-relaxed mb-6">協助傳統產業導入數據採集系統，透過 OEE 分析優化瓶頸工作站，成功優化排程效率達 20% 以上，並建立數位轉型藍圖。</p>
+                        <div class="flex space-x-2">
+                            <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded">智慧診斷</span>
+                            <span class="text-xs bg-white border border-slate-200 px-2 py-1 rounded">數據採集</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flex flex-col md:flex-row bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 group">
+                    <div class="md:w-1/3 bg-slate-800 flex items-center justify-center p-12">
+                        <i data-lucide="flask-conical" class="text-white w-20 h-20 opacity-40"></i>
+                    </div>
+                    <div class="md:w-2/3 p-8 md:p-12">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">2022 - 2023</span>
+                            <i data-lucide="external-link" class="text-slate-400 w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">智慧倉儲自動化選料演算法開發</h3>
+                        <p class="text-blue-600 font-medium mb-4">合作對象：知名物流設備商</p>
+                        <p class="text-slate-600 leading-relaxed mb-6">利用啟發式演算法優化自動化倉儲（AS/RS）之揀貨路徑，大幅減少堆高機與人員搬運無效路徑，提升出貨吞吐量。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">聯絡資訊</h2>
+                    <p class="text-slate-400 mb-12 text-lg">如果您對產學合作、專題指導或研究計畫有任何興趣，歡迎透過以下方式與我聯繫。</p>
+                    
+                    <ul class="space-y-8">
+                        <li class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-blue-400">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-400 uppercase font-bold">電子郵件</div>
+                                <div class="text-lg">hy_lee@mail.npust.edu.tw</div>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-blue-400">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-400 uppercase font-bold">研究室位置</div>
+                                <div class="text-lg">屏東科技大學 工管系大樓 R-XXX</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+                    <form onsubmit="return false;" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-400 mb-2">姓名</label>
+                                <input type="text" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-400 mb-2">單位</label>
+                                <input type="text" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-400 mb-2">聯絡主旨</label>
+                            <input type="text" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-400 mb-2">訊息內容</label>
+                            <textarea rows="4" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all">
+                            送出訊息
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <footer class="mt-20 pt-8 border-t border-white/10 text-center text-slate-500 text-sm">
+                <p>&copy; 2024 李皇諭 研究室. All rights reserved.</p>
+                <p class="mt-2">國立屏東科技大學 工業管理系 | 屏東縣內埔鄉學府路1號</p>
+            </footer>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple Active State for Nav Links on Scroll
+        window.addEventListener('scroll', () => {
+            const sections = ['home', 'about', 'research', 'projects', 'contact'];
+            const navLinks = document.querySelectorAll('nav .hidden.md\\:flex a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                link.classList.add('text-slate-600');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-blue-600');
+                    link.classList.remove('text-slate-600');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
