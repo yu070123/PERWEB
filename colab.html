@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國立屏東科技大學 - 產學合作中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .npust-gradient {
+            background: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .section-card {
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Top Info Bar -->
+    <div class="bg-emerald-900 text-emerald-50 py-2 text-xs hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-4">
+                <span class="flex items-center"><i data-lucide="phone" class="w-3 h-3 mr-1"></i> (08) 770-3202</span>
+                <span class="flex items-center"><i data-lucide="mail" class="w-3 h-3 mr-1"></i> iac@mail.npust.edu.tw</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-white">屏科大首頁</a>
+                <a href="#" class="hover:text-white">研發處</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full nav-blur shadow-md z-50 border-b border-emerald-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-emerald-700 p-2 rounded-lg">
+                        <i data-lucide="microscope" class="text-white w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-emerald-900 leading-tight">產學合作中心</h1>
+                        <p class="text-[10px] text-emerald-700 font-medium tracking-widest uppercase">Center for Industry-Academia Collaboration</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="#about" class="text-sm font-bold text-slate-700 hover:text-emerald-700 transition-colors">中心簡介</a>
+                    <a href="#services" class="text-sm font-bold text-slate-700 hover:text-emerald-700 transition-colors">服務項目</a>
+                    <a href="#tech" class="text-sm font-bold text-slate-700 hover:text-emerald-700 transition-colors">技術轉移</a>
+                    <a href="#incubation" class="text-sm font-bold text-slate-700 hover:text-emerald-700 transition-colors">創新育成</a>
+                    <a href="#download" class="text-sm font-bold text-slate-700 hover:text-emerald-700 transition-colors">表單下載</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button class="bg-emerald-700 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-emerald-800 transition-all">
+                        企業媒合登記
+                    </button>
+                    <button id="mobile-toggle" class="lg:hidden p-2 text-emerald-900">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#about" class="block font-bold text-slate-700">中心簡介</a>
+                <a href="#services" class="block font-bold text-slate-700">服務項目</a>
+                <a href="#tech" class="block font-bold text-slate-700">技術轉移</a>
+                <a href="#incubation" class="block font-bold text-slate-700">創新育成</a>
+                <a href="#download" class="block font-bold text-slate-700">表單下載</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-emerald-900 text-white pt-24 pb-32">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <span class="inline-block px-4 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-300 text-xs font-bold mb-6 tracking-widest">CONNECTING SCIENCE TO BUSINESS</span>
+                    <h2 class="text-4xl lg:text-6xl font-black mb-8 leading-tight italic">
+                        屏科研究，<br />
+                        <span class="text-emerald-400">引領產業創新。</span>
+                    </h2>
+                    <p class="text-lg text-emerald-100/80 mb-10 max-w-xl leading-relaxed">
+                        我們作為校內研究能量與外界產業需求的橋樑，提供技術媒合、專利授權及企業研發合作，攜手創造實質的社會價值。
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <button class="bg-white text-emerald-900 px-8 py-4 rounded-xl font-black shadow-xl hover:bg-emerald-50 transition-all flex items-center">
+                            <i data-lucide="search" class="w-5 h-5 mr-2"></i> 尋找專家技術
+                        </button>
+                        <button class="bg-emerald-700/50 border border-emerald-500/50 text-white px-8 py-4 rounded-xl font-black hover:bg-emerald-700 transition-all">
+                            產學合作導覽
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-white/10 p-8 rounded-3xl backdrop-blur-md border border-white/10 mt-8">
+                        <div class="text-4xl font-black text-emerald-400 mb-2">1,500+</div>
+                        <div class="text-sm font-bold opacity-70">歷年合作件數</div>
+                    </div>
+                    <div class="bg-emerald-500/20 p-8 rounded-3xl backdrop-blur-md border border-emerald-500/20">
+                        <div class="text-4xl font-black text-emerald-400 mb-2">350+</div>
+                        <div class="text-sm font-bold opacity-70">有效專利技術</div>
+                    </div>
+                    <div class="bg-emerald-500/20 p-8 rounded-3xl backdrop-blur-md border border-emerald-500/20">
+                        <div class="text-4xl font-black text-emerald-400 mb-2">80+</div>
+                        <div class="text-sm font-bold opacity-70">進駐育成企業</div>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-3xl backdrop-blur-md border border-white/10 mb-8">
+                        <div class="text-4xl font-black text-emerald-400 mb-2">12億</div>
+                        <div class="text-sm font-bold opacity-70">產學合作總金額</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h3 class="text-emerald-700 font-black uppercase tracking-widest text-sm mb-4">Core Services</h3>
+                <h2 class="text-4xl font-bold text-slate-800 italic">四大核心服務</h2>
+                <div class="w-20 h-1.5 bg-emerald-600 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 section-card">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-700 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="handshake"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">產學合約簽署</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">提供產學合作合約、委託研究合約之諮詢、審閱與用印申請流程導引。</p>
+                    <a href="#" class="text-emerald-700 font-bold text-sm flex items-center hover:underline">了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 section-card">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-700 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">智財專利管理</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">協助教師與研發人員進行專利申請、佈局諮詢及智慧財產權之維護與管理。</p>
+                    <a href="#" class="text-blue-700 font-bold text-sm flex items-center hover:underline">了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 section-card">
+                    <div class="w-14 h-14 bg-orange-50 text-orange-700 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">技術移轉服務</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">媒合校方優質研發成果至產業界，協助技術商品化，建立產學雙贏模式。</p>
+                    <a href="#" class="text-orange-700 font-bold text-sm flex items-center hover:underline">了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 section-card">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-700 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">創新育成輔導</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">提供進駐企業創業資源輔導、營運諮詢、資金融通媒合及辦公空間租賃。</p>
+                    <a href="#" class="text-purple-700 font-bold text-sm flex items-center hover:underline">了解詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Tech Transfer -->
+    <section id="tech" class="py-24 px-4 bg-emerald-900 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">熱門技術轉移項目</h2>
+                    <p class="text-emerald-200/70">精選校內各學院具備商用潛力之研發成果</p>
+                </div>
+                <button class="px-6 py-2 border border-emerald-500 text-emerald-300 font-bold rounded-lg hover:bg-emerald-800 transition-all">
+                    瀏覽技術資料庫 (TDB)
+                </button>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tech 1 -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all group">
+                    <span class="text-xs font-bold text-emerald-400 mb-4 block tracking-widest">農學院</span>
+                    <h4 class="text-xl font-bold mb-4 group-hover:text-emerald-400 transition-colors italic">抗逆境優質種苗培育技術</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">透過基因標誌輔助選種與逆境馴化技術，提升高價作物在氣候變遷下的存活率與產能。</p>
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="bg-emerald-500/20 px-3 py-1 rounded text-emerald-300">已獲發明專利</span>
+                        <span class="opacity-50 italic">#農業生技</span>
+                    </div>
+                </div>
+                <!-- Tech 2 -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all group">
+                    <span class="text-xs font-bold text-emerald-400 mb-4 block tracking-widest">工學院</span>
+                    <h4 class="text-xl font-bold mb-4 group-hover:text-emerald-400 transition-colors italic">智慧型環境感測控制系統</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">結合 AI 邊緣運算與物聯網技術，實現工業廠房之節能與精準環境參數調控。</p>
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="bg-emerald-500/20 px-3 py-1 rounded text-emerald-300">技術準備度 TRL-6</span>
+                        <span class="opacity-50 italic">#工業4.0</span>
+                    </div>
+                </div>
+                <!-- Tech 3 -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all group">
+                    <span class="text-xs font-bold text-emerald-400 mb-4 block tracking-widest">生技學院</span>
+                    <h4 class="text-xl font-bold mb-4 group-hover:text-emerald-400 transition-colors italic">機能性農產品萃取技術</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">特殊低溫高壓萃取工法，保留農產原料中高活性之機能性成分，適用於生醫保健食品開發。</p>
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="bg-emerald-500/20 px-3 py-1 rounded text-emerald-300">產學合作中</span>
+                        <span class="opacity-50 italic">#大健康產業</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Downloads -->
+    <section id="download" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <!-- News -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-10 text-slate-800 flex items-center italic">
+                        <i data-lucide="bell" class="w-8 h-8 mr-3 text-emerald-700"></i> 最新公告
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-6 pb-6 border-b border-slate-100 hover:bg-slate-50 transition-colors p-2 rounded-xl">
+                            <div class="flex-shrink-0 w-20 text-center">
+                                <div class="text-2xl font-black text-emerald-700">28</div>
+                                <div class="text-xs font-bold text-slate-400 uppercase">Mar 2024</div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2 hover:text-emerald-700 transition-colors">113年度國科會產學合作開發計畫開放申請通知</h4>
+                                <p class="text-sm text-slate-500">敬請有意申請之教師於4月20日前完成線上系統作業並通知本中心...</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 pb-6 border-b border-slate-100 hover:bg-slate-50 transition-colors p-2 rounded-xl">
+                            <div class="flex-shrink-0 w-20 text-center">
+                                <div class="text-2xl font-black text-emerald-700">15</div>
+                                <div class="text-xs font-bold text-slate-400 uppercase">Mar 2024</div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-2 hover:text-emerald-700 transition-colors">【活動導報】屏科大校園技術商展暨媒合大會活動回顧</h4>
+                                <p class="text-sm text-slate-500">本次商展吸引超過50家企業代表參與，現場簽屬初步技術意向書達8件...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mt-10 text-emerald-700 font-bold flex items-center hover:translate-x-2 transition-transform">
+                        查看更多公告 <i data-lucide="chevrons-right" class="w-5 h-5 ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Fast Downloads -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-10 text-slate-800 flex items-center italic">
+                        <i data-lucide="file-down" class="w-8 h-8 mr-3 text-emerald-700"></i> 快速下載
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="#" class="flex items-center p-6 bg-slate-50 rounded-2xl hover:bg-emerald-50 border border-transparent hover:border-emerald-200 transition-all group">
+                            <i data-lucide="file-text" class="text-slate-400 group-hover:text-emerald-600 mr-4"></i>
+                            <span class="text-sm font-bold text-slate-700">產學合作計畫書範本</span>
+                        </a>
+                        <a href="#" class="flex items-center p-6 bg-slate-50 rounded-2xl hover:bg-emerald-50 border border-transparent hover:border-emerald-200 transition-all group">
+                            <i data-lucide="file-check" class="text-slate-400 group-hover:text-emerald-600 mr-4"></i>
+                            <span class="text-sm font-bold text-slate-700">校內產學合約用印單</span>
+                        </a>
+                        <a href="#" class="flex items-center p-6 bg-slate-50 rounded-2xl hover:bg-emerald-50 border border-transparent hover:border-emerald-200 transition-all group">
+                            <i data-lucide="file-spreadsheet" class="text-slate-400 group-hover:text-emerald-600 mr-4"></i>
+                            <span class="text-sm font-bold text-slate-700">發明專利申請提案書</span>
+                        </a>
+                        <a href="#" class="flex items-center p-6 bg-slate-50 rounded-2xl hover:bg-emerald-50 border border-transparent hover:border-emerald-200 transition-all group">
+                            <i data-lucide="file-key" class="text-slate-400 group-hover:text-emerald-600 mr-4"></i>
+                            <span class="text-sm font-bold text-slate-700">保密合約 NDA 範本</span>
+                        </a>
+                    </div>
+                    <div class="mt-8 p-6 bg-emerald-50 rounded-3xl border border-emerald-100 italic">
+                        <p class="text-xs text-emerald-800 leading-relaxed">
+                            <i data-lucide="info" class="w-4 h-4 inline mr-1"></i> 
+                            提醒：校內文件用印申請，請預留 5-7 個工作天作業流程。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-20 pb-10 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-16 mb-20">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-emerald-600 p-2 rounded-lg">
+                            <i data-lucide="microscope" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h1 class="text-xl font-bold leading-tight">產學合作中心</h1>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        國立屏東科技大學 研究發展處產學合作中心，專責校內智財管理、技術轉移及產學鏈結工作。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-emerald-600 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-emerald-600 transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="font-bold text-lg border-l-4 border-emerald-600 pl-4">相關連結</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white">教育部高等教育深耕計畫</a></li>
+                        <li><a href="#" class="hover:text-white">國科會產學合作資訊網</a></li>
+                        <li><a href="#" class="hover:text-white">智慧財產局專利資料檢索</a></li>
+                        <li><a href="#" class="hover:text-white">屏東縣政府工商發展處</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="font-bold text-lg border-l-4 border-emerald-600 pl-4">聯絡我們</h4>
+                    <div class="space-y-4 text-sm text-slate-400">
+                        <p class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0"></i> 91201 屏東縣內埔鄉學府路1號<br />(研發大樓3樓)</p>
+                        <p class="flex items-center"><i data-lucide="phone" class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0"></i> (08) 770-3202 分機 6432</p>
+                        <p class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-3 text-emerald-500 flex-shrink-0"></i> iac@mail.npust.edu.tw</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-10 border-t border-white/5 text-center text-xs text-slate-500">
+                <p>&copy; 2024 National Pingtung University of Science and Technology. All Rights Reserved.</p>
+                <p class="mt-2">網站由屏科大產學中心資訊維護小組設計</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
